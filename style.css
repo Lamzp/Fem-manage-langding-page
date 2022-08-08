@@ -1,5 +1,50 @@
 /* https://piccalil.li/blog/a-modern-css-reset */
+:root {
+  --clr-accent-400: hsl(12, 88%, 59%);
+  --clr-accent-100: hsl(13, 100%, 96%);
 
+  --clr-primary-100: hsl(228, 39%, 23%);
+
+  --clr-neutral-100: hsl(232, 12%, 13%);
+  --clr-neutral-900: hsl(0 0% 0%);
+
+  --ff-primary:  'Be Vietnam Pro', sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-300: 1.3rem;
+  --fs-400: 1.4rem;
+  --fs-500: 1.5rem;
+  --fs-600: 1.6rem;
+  --fs-700: 3rem;
+  --fs-800: 4rem;
+  --fs-900: 5rem;
+
+  --fs-body: var(--fs-400);
+  --fs-primary-heading: var(--fs-800);
+  --fs-secondary-heading: var(--fs-700);
+  --fs-nav: var(--fs-500);
+  --fs-button: var(--fs-300);
+
+}
+
+@media (min-width: 50em) {
+  :root {
+    --fs-700: 5rem;
+    --fs-600: 4rem;
+
+    --fs-body: var(--fs-500);
+    --fs-primary-heading: var(--fs-900);
+    --fs-secondary-heading: var(--fs-800);
+    --fs-nav: var(--fs-300);
+
+  }
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -28,6 +73,9 @@ html:focus-within {
 html,
 body {
   height: 100%;
+}
+html {
+  font-size: 62.5%;
 }
 /* Set core body defaults */
 body {
@@ -69,4 +117,18 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Utility classes */
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+.text-accent-400 {
+  color: var(--clr-accent-400);
+}
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+.text-neutral-900 {
+  color: var(--clr-neutral-900);
 }
